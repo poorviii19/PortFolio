@@ -1,32 +1,95 @@
+/* NAVBAR */
 .elite-navbar {
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(10px);
+  background: rgba(10, 15, 30, 0.7);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: 0.3s ease;
 }
 
-.glass-card {
-  backdrop-filter: blur(25px);
-  background: rgba(255,255,255,0.05);
-  padding: 50px;
-  border-radius: 20px;
-  border: 1px solid rgba(255,255,255,0.1);
-}
-
-.skills span {
-  display: inline-block;
-  background: #6366F1;
-  padding: 8px 16px;
-  border-radius: 20px;
-  margin: 5px;
-}
-
-.project-card {
-  background: #1f2937;
-  padding: 20px;
-  border-radius: 16px;
+.navbar .nav-link {
+  position: relative;
   transition: 0.3s;
 }
 
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: var(--primary);
+  transition: 0.3s;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* GLASS CARD */
+.glass-card {
+  backdrop-filter: blur(30px);
+  background: rgba(255,255,255,0.06);
+  padding: 60px;
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+  transition: 0.4s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+}
+
+/* SKILL BADGES */
+.skills span {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 30px;
+  margin: 6px;
+  font-size: 14px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.skills span:hover {
+  transform: scale(1.1);
+}
+
+/* PROJECT CARD */
+.project-card {
+  background: rgba(31, 41, 55, 0.7);
+  backdrop-filter: blur(15px);
+  padding: 25px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: 0.4s ease;
+  height: 100%;
+}
+
+.project-card img {
+  border-radius: 12px;
+  transition: 0.4s ease;
+}
+
 .project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+  transform: translateY(-12px);
+  box-shadow: 0 25px 60px rgba(99,102,241,0.3);
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+.social-link {
+  font-size: 22px;
+  color: white;
+  transition: 0.3s;
+}
+
+.social-link:hover {
+  color: var(--primary);
+  transform: translateY(-5px);
 }

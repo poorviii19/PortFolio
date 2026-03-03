@@ -1,20 +1,43 @@
-body {
-  background: #0B0F19;
-  color: #E5E7EB;
-  font-family: 'Inter', sans-serif;
+:root {
+  --primary: #6366F1;
+  --accent: #8B5CF6;
+  --dark-bg: #0B0F19;
+  --card-bg: rgba(255,255,255,0.05);
 }
 
+body {
+  background: linear-gradient(135deg, #0B0F19, #0f172a);
+  color: #E5E7EB;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Animated Gradient Hero */
 .hero {
   height: 100vh;
-  background: radial-gradient(circle at top, #1e293b, #020617);
+  background: radial-gradient(circle at 20% 20%, rgba(99,102,241,0.3), transparent 40%),
+              radial-gradient(circle at 80% 80%, rgba(139,92,246,0.3), transparent 40%),
+              #020617;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(99,102,241,0.2), transparent);
+  top: -200px;
+  left: -200px;
+  filter: blur(120px);
 }
 
 .section {
-  padding: 100px 0;
+  padding: 120px 0;
 }
 
 .dark {
-  background: #121826;
+  background: linear-gradient(135deg, #0f172a, #020617);
 }
 
 footer {
