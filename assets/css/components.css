@@ -26,6 +26,7 @@
   width: 100%;
 }
 
+
 /* GLASS CARD */
 .glass-card {
   backdrop-filter: blur(30px);
@@ -40,6 +41,7 @@
 .glass-card:hover {
   transform: translateY(-8px);
 }
+
 
 /* SKILL BADGES */
 .skills span {
@@ -58,6 +60,7 @@
   transform: scale(1.1);
 }
 
+
 /* PROJECT CARD */
 .project-card {
   background: rgba(31, 41, 55, 0.7);
@@ -70,6 +73,7 @@
 }
 
 .project-card img {
+  width: 100%;
   border-radius: 12px;
   transition: 0.4s ease;
 }
@@ -83,6 +87,8 @@
   transform: scale(1.05);
 }
 
+
+/* SOCIAL ICONS */
 .social-link {
   font-size: 22px;
   color: white;
@@ -92,4 +98,74 @@
 .social-link:hover {
   color: var(--primary);
   transform: translateY(-5px);
+}
+
+
+/* ---------- TABLET ---------- */
+@media (max-width: 992px){
+
+  .glass-card{
+    padding: 40px;
+  }
+
+  .skills span{
+    font-size: 13px;
+    padding: 7px 16px;
+  }
+
+  .project-card{
+    padding: 20px;
+  }
+
+  .social-link{
+    font-size: 20px;
+  }
+
+}
+
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px){
+
+  .glass-card{
+    padding: 30px;
+  }
+
+  .skills span{
+    font-size: 12px;
+    padding: 6px 14px;
+  }
+
+  .project-card{
+    padding: 18px;
+  }
+
+  .social-link{
+    font-size: 18px;
+  }
+
+}
+
+
+/* ---------- SMALL PHONES ---------- */
+@media (max-width: 480px){
+
+  .glass-card{
+    padding: 22px;
+    border-radius: 18px;
+  }
+
+  .skills span{
+    font-size: 11px;
+    padding: 5px 12px;
+  }
+
+  .project-card{
+    padding: 15px;
+  }
+
+  .social-link{
+    font-size: 16px;
+  }
+
 }

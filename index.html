@@ -178,24 +178,38 @@
 <!-- CONTACT -->
 <section id="contact" class="section py-5">
     <div class="container">
+
         <div class="text-center mb-5">
             <h2 data-aos="fade-up">Get In Touch</h2>
             <p class="lead text-white">Let's build something amazing together</p>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-md-6" data-aos="fade-up">
+
+        <div class="row align-items-center  ">
+
+            
+            <!-- Contact Form -->
+            <div class="col-md-7" data-aos="fade-left">
                 <form id="contactForm" class="elite-form">
                     <input type="text" id="name" class="form-control mb-3" placeholder="Your Name" required>
+                    
                     <input type="email" id="email" class="form-control mb-3" placeholder="Your Email" required>
+                    
                     <textarea id="message" class="form-control mb-3" rows="5" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn btn-primary elite-btn w-100">Send Message</button>
+                    
+                    <button type="submit" class="btn btn-primary elite-btn w-100">
+                        Send Message
+                    </button>
                 </form>
-               
+            </div>
+            
+            <!-- Photo Section -->
+            <div class="col-md-5 text-center mb-4 mb-md-0 " data-aos="fade-right">
+                <img src="assets/images/PoorviImg.jpg" alt="Poorvi" class="contact-photo shadow-lg">
             </div>
         </div>
+
     </div>
 </section>
-
 <script>
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
